@@ -63,5 +63,18 @@ function funcNumAverage (ArrNumbers = [10, 20, 30]) {
 }
  console.log(funcNumAverage());
 
-//Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
+//Створити функцію яка приймає масив будь яких об'єктів, та повертає масив ключів всіх обєктів
 // EXAMPLE:[{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
+
+function ArrObjects(User){
+    let=User[0];
+    let UsersObj = {
+    name: 'Dima',
+    age: 13,
+    model: 'Camry'}
+    for (const item of users) {
+        User=UsersObj[item];
+    return(User);
+}
+}
+console.log(ArrObjects());

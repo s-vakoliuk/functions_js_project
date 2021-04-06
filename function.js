@@ -8,12 +8,35 @@ function funcArrCars() {
 funcArrCars();
 
 // створити функцію яка заповнює масив рандомними числами та виводить його. Для виведення використати попередню функцію.
-function funcArr() {
+function funcArrRandNum() {
     let ArrayRandomNumbers = [];
     for (let item = 0; item < 5; item = item + 1) {
         ArrayRandomNumbers[item] = Math.floor(Math.random() * 10);
         console.log(ArrayRandomNumbers[item]);
     }
 }
-funcArr();
+funcArrRandNum();
+
+// створити функцію яка повертає найменше число з масиву. (Без Math.min!)
+function funcNumMin(ArrNumbers = [10, 20, 30]) {
+    let min = ArrNumbers[0];
+    for (let item = 0; item < ArrNumbers.length; item = item + 1) {
+        if (ArrNumbers[item] < min) {
+            min = ArrNumbers[item];
+        }
+    }console.log(min);
+}
+
+funcNumMin();
+// створити функцію яка повертає найбільше число з масиву (Без Math.max!)
+function funcNumMax(ArrNumbers = [10, 20, 30]) {
+    let max = ArrNumbers[0];
+    for (let item = 0; item < ArrNumbers.length; item = item + 1) {
+        if (ArrNumbers[item] > max) {
+            max = ArrNumbers[item];
+        }
+    }console.log(max);
+}
+funcNumMax()
+
 

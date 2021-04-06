@@ -24,19 +24,31 @@ function funcNumMin(ArrNumbers = [10, 20, 30]) {
         if (ArrNumbers[item] < min) {
             min = ArrNumbers[item];
         }
-    }console.log(min);
+    }
+return(min);
+console.log(min);
 }
 
 funcNumMin();
 // створити функцію яка повертає найбільше число з масиву (Без Math.max!)
-function funcNumMax(ArrNumbers = [10, 20, 30]) {
+function funcNumMax (ArrNumbers = [10, 20, 30]) {
     let max = ArrNumbers[0];
     for (let item = 0; item < ArrNumbers.length; item = item + 1) {
         if (ArrNumbers[item] > max) {
             max = ArrNumbers[item];
         }
     }console.log(max);
+    return(max);
 }
 funcNumMax()
 
-
+// функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його
+function funcNumSumm (ArrNumbers = [10, 20, 30]) {
+    Summ = 0;
+    for (let item = 0; item < ArrNumbers.length; item = item + 1) {
+        Summ= Summ+ArrNumbers[item];
+    }
+    console.log(Summ);
+    return(Summ);
+}
+funcNumSumm()

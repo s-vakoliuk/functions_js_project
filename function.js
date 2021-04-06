@@ -4,18 +4,18 @@ function funcArrCars() {
     for (let item = 0; item < 5; item = item + 1) {
         console.log(ArrayRandomNumbers[item]);
     }
+    return(ArrayRandomNumbers);
 }
-funcArrCars();
+console.log(funcArrCars());
 
 // створити функцію яка заповнює масив рандомними числами та виводить його. Для виведення використати попередню функцію.
-function funcArrRandNum() {
-    let ArrayRandomNumbers = [];
+function funcArrRandNum(ArrayRandomNumbers = []) {
     for (let item = 0; item < 5; item = item + 1) {
         ArrayRandomNumbers[item] = Math.floor(Math.random() * 10);
-        console.log(ArrayRandomNumbers[item]);
     }
+    return(ArrayRandomNumbers)
 }
-funcArrRandNum();
+console.log(funcArrRandNum());
 
 // створити функцію яка повертає найменше число з масиву. (Без Math.min!)
 function funcNumMin(ArrNumbers = [10, 20, 30]) {
@@ -26,10 +26,9 @@ function funcNumMin(ArrNumbers = [10, 20, 30]) {
         }
     }
 return(min);
-console.log(min);
 }
+console.log(funcNumMin());
 
-funcNumMin();
 // створити функцію яка повертає найбільше число з масиву (Без Math.max!)
 function funcNumMax (ArrNumbers = [10, 20, 30]) {
     let max = ArrNumbers[0];
@@ -37,18 +36,32 @@ function funcNumMax (ArrNumbers = [10, 20, 30]) {
         if (ArrNumbers[item] > max) {
             max = ArrNumbers[item];
         }
-    }console.log(max);
+    }
     return(max);
 }
-funcNumMax()
+console.log(funcNumMax());
 
-// функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його
+// створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його
 function funcNumSumm (ArrNumbers = [10, 20, 30]) {
     Summ = 0;
     for (let item = 0; item < ArrNumbers.length; item = item + 1) {
         Summ= Summ+ArrNumbers[item];
     }
-    console.log(Summ);
     return(Summ);
 }
-funcNumSumm()
+console.log(funcNumSumm());
+
+//створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
+function funcNumAverage (ArrNumbers = [10, 20, 30]) {
+    Summ=0;
+    Average = 0;
+    for (let item = 0; item < ArrNumbers.length; item = item + 1) {
+        Summ= Summ+ArrNumbers[item];
+        Average=(Summ/ArrNumbers.length);
+    }
+    return(Average);
+}
+ console.log(funcNumAverage());
+
+//Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
+// EXAMPLE:[{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
